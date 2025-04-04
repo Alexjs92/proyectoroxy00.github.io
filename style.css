@@ -1,0 +1,25 @@
+.mensaje {
+    color:white;
+    font-family:Arial, Helvetica, sans-serif;
+    width:500;
+    font-size:25px;
+
+}
+.information {
+    color:white;
+    font-family:Arial, Helvetica, sans-serif;
+    width:500;
+    font-size:25px;
+    position:absolute;
+    top:60px;
+
+}
+.proyecto-roxy {
+    color:white;
+    font-family:Arial, Helvetica, sans-serif;
+    width:500;
+    font-size:25px;
+    position:absolute;
+    top:200px;
+
+}
