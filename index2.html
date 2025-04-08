@@ -27,6 +27,17 @@
             text-align: center;
         }
 
+        .mi-imagen {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            border: 2px solid lime;
+            border-radius: 10px;
+            display: block;
+            margin: 20px auto;
+            box-shadow: 0 0 15px lime;
+        }
+
         @media (min-width: 600px) {
             .principal {
                 font-size: 30px;
@@ -35,11 +46,16 @@
             .update2 {
                 font-size: 25px;
             }
+
+            .mi-imagen {
+                max-width: 400px;
+            }
         }
     </style>
 </head>
 <body>
     <p class="principal">Panel interactivo</p>
     <p class="update2">En esta redirección podrás encontrar una colección de imágenes</p>
+    <img src="IMG_2969.jpeg" alt="Imagen decorativa" class="mi-imagen">
 </body>
 </html>
