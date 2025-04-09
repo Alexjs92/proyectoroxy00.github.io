@@ -1,167 +1,59 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>proyecto Roxy</title>
+  <title>CORTAFUEGOS 99</title>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
-      background-image: url(https://wallpapers.com/images/hd/digital-background-xmjiaothk5easbnl.jpg);
-      color: rgb(255, 255, 255);
-      text-align: center;
-      font-family: Arial, sans-serif;
-      margin: 0;
-      overflow: hidden;
-    }
-
-    #chat-container {
-      position: absolute;
-      bottom: 20px;
-      width: 90%;
-      left: 50%;
-      transform: translateX(-50%);
-      max-width: 400px;
-    }
-
-    #messages {
-      height: 250px;
-      overflow-y: auto;
-      background: rgba(111, 0, 255, 0.14);
-      padding: 10px;
-      border-radius: 10px;
-      margin-bottom: 10px;
-    }
-
-    input {
-      width: 70%;
-      padding: 10px;
-      font-size: 18px;
-      color: rgb(0, 0, 0);
-      margin-right: 10px;
-      border-radius: 5px;
-    }
-
-    button {
-      padding: 10px;
-      font-size: 16px;
-      color: rgb(0, 153, 255);
-      background: rgb(0, 0, 0);
-      border: none;
-      cursor: pointer;
-      border-radius: 5px;
-    }
-
-    .mensaje, .information, .proyecto-roxy {
-      font-size: 18px;
-      color: white;
-      margin: 10px 0;
-    }
-
-    #canvas-container {
-      width: 100%;
-      height: 100%;
-    }
-
-    canvas {
-      width: 100%;
-      height: 100%;
-      display: block;
+        background-color:red
     }
   </style>
-  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<p class="mensaje"> ---</p>
-<p class="information"> Roxy-00 actualizada // no puede procesar texto</p>
-<p class="proyecto-roxy">Roxy-00/ Comandos:Hola,que eres?,adios,calculos?,</p>
-<a href="index2.html" style="color:blue; font-size:25px; background-color:black; position: absolute; top: 0px; width: 800 "> Visitar otro html </a>
-
-<div id="canvas-container">
-  <canvas id="animationCanvas"></canvas>
-</div>
-
-<div id="chat-container">
-  <div id="messages"></div>
-  <input type="text" id="userInput" placeholder="Escribe un comando..." onkeypress="handleKeyPress(event)">
-  <button onclick="sendMessage()">Enviar</button>
-</div>
-
-<script>
-  var scene, camera, renderer;
-  var geometry, material, mesh;
-
-  function init() {
-    scene = new THREE.Scene();
-    camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 10000);
-    camera.position.z = 500;
-
-    geometry = new THREE.BoxGeometry(250, 250, 250);
-    material = new THREE.MeshBasicMaterial({ color: 0xff0900, wireframe: true });
-    mesh = new THREE.Mesh(geometry, material);
-    scene.add(mesh);
-
-    const canvas = document.getElementById('animationCanvas');
-    renderer = new THREE.WebGLRenderer({ canvas: canvas, alpha: true });
-
-    renderer.setSize(window.innerWidth, window.innerHeight);
-
-    window.addEventListener('resize', () => {
-      renderer.setSize(window.innerWidth, window.innerHeight);
-      camera.aspect = window.innerWidth / window.innerHeight;
-      camera.updateProjectionMatrix();
-    });
-  }
-
-  function animate() {
-    requestAnimationFrame(animate);
-    mesh.rotation.x += 1.01;
-    mesh.rotation.y += 1.01;
-    renderer.render(scene, camera);
-  }
-
-  init();
-  animate();
-
-  function sendMessage(message = null) {
-    let inputField = document.getElementById('userInput');
-    let userMessage = message || inputField.value.trim();
-    if (userMessage === '') return;
-
-    addMessage("Tú: " + userMessage);
-    inputField.value = '';
-
-    setTimeout(() => {
-      let response = getResponse(userMessage);
-      addMessage("Roxy-99: " + response.text);
-    }, 1000);
-  }
-
-  function addMessage(text) {
-    let messageBox = document.getElementById('messages');
-    let newMessage = document.createElement('p');
-    newMessage.textContent = text;
-    messageBox.appendChild(newMessage);
-    messageBox.scrollTop = messageBox.scrollHeight;
-  }
-
-  function getResponse(input) {
-    input = input.toLowerCase();
-
-    if (input.includes("hola")) return { text: "Hola, soy Roxy-00" };
-    if (input.includes("que eres?")) return { text: "Soy Roxy-00, un bot el cual puede ejecutar texto y servir de almacenamiento" };
-    if (input.includes("calculos?")) return { text: "No estoy programado para realizar calculos ya que se necesitaria utilizar python. Y eso no esta disponible en este formato" };
-    
-    if (input.includes("x1")) return { text: "-Respuesta no programada"};
-    if (input.includes ("comando5")) return { text: "Comando invalido/No programado"};
-
-    return { text: "Comando invalido." };
-  }
-
-  function handleKeyPress(event) {
-    if (event.key === 'Enter') {
-      sendMessage();
-    }
-  }
-</script>
+    <p class="titule"> CORTAFUEGOS DE ANONIMO_99 </p>
+        <style>
+            .titule{
+                font-family:monospace;
+                font-size:40px;
+                font-weight: 900;
+                position: absolute;
+                top:400px;
+                right:700px;
+            }
+        </style>
+    <img src="Img.png" style="position:absolute; top: 50px; right:700px;">
+    <p class="information"> -Has sido interceptado por el cortafuegos de Anonimo_99</p>
+        <style>
+            .information {
+               font-family:monospace;
+                font-size:25px;
+                font-weight: 900;
+                position: absolute;
+                top:500px;
+                right:600px;
+            }
+        </style>
+    <p class="data">-NECESITAS LA AUTORIZACION DE ANONIMO_99 PARA ACCEDER A ESTA TERMINAL </p>
+        <style>
+            .data {
+               font-family:monospace;
+                font-size:25px;
+                font-weight: 900;
+                position: absolute;
+                top:600px;
+                right:500px;
+            }
+        </style>
+    <p class="fun">Aquí no encontrarás lo que buscas...</p>
+    <style>
+        .fun {
+           font-family:monospace;
+            font-size:25px;
+            font-weight: 900;
+            position: absolute;
+            top:700px;
+            right:700px;
+        }
+    </style>
 </body>
 </html>
